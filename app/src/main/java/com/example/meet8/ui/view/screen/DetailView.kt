@@ -21,4 +21,19 @@ fun DatailView(
     rencanaStudi: RencanaStudi,
     onBackButtonClicked: () -> Unit,
     onResetButtonClicked: () -> Unit
-)
+) {
+    Column(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text("Detail Mahasiswa", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+
+        // Menampilkan data Mahasiswa
+        DetailRow(label = "Nama", value = mahasiswa.nama)
+        DetailRow(label = "NIM", value = mahasiswa.nim)
+        DetailRow(label = "Email", value = mahasiswa.email)
+
+        Spacer(modifier = Modifier.padding(8.dp))
+
