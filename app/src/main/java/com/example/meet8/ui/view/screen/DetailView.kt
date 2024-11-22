@@ -37,3 +37,10 @@ fun DatailView(
 
         Spacer(modifier = Modifier.padding(8.dp))
 
+        // Menampilkan Rencana Studi
+        Text("Rencana Studi", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        DetailRow(label = "Mata Kuliah", value = rencanaStudi.matakuliah)
+        DetailRow(label = "Kelas", value = rencanaStudi.kelas)
+
+        Spacer(modifier = Modifier.padding(8.dp))
+
