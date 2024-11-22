@@ -67,6 +67,17 @@ fun MahasiswaApp(
                 onBackButtonClicked = { navController.popBackStack() }
             )
         }
-
+        composable(route = Halaman.Tampil.name) {
+            DatailView(
+                mahasiswa = mahasiswaUiState,
+                rencanaStudi = rencanaStudiUiState,
+                onBackButtonClicked = { navController.popBackStack() },
+                onResetButtonClicked = {
+                    navController.navigate(Halaman.Splash.name) {
+                        popUpTo(Halaman.Splash.name) { inclusive = true }
+                    }
+                }
+            )
+        }
     }
 }
