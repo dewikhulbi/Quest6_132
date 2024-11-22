@@ -44,3 +44,17 @@ fun DatailView(
 
         Spacer(modifier = Modifier.padding(8.dp))
 
+        // Tombol Navigasi
+        Button(onClick = onBackButtonClicked) {
+            Text("Kembali")
+        }
+        Button(
+            onClick = onResetButtonClicked,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Reset")
+        }
+    }
+}
+
+
